@@ -1,5 +1,6 @@
 package com.francisco.foromania;
 
+import com.francisco.foromania.infra.SpringDoc;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

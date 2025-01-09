@@ -4,6 +4,7 @@ package com.francisco.foromania.controller;
 import com.francisco.foromania.domain.respuesta.*;
 import com.francisco.foromania.domain.topico.TopicoRepository;
 import com.francisco.foromania.domain.usuario.UsuarioRepository;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/respuestas")
+@SecurityRequirement(name = "bearer-key")
 public class RespuestasController {
     @Autowired
     private RespuestaRepository repository;

@@ -4,6 +4,7 @@ import com.francisco.foromania.domain.curso.Curso;
 import com.francisco.foromania.domain.curso.CursoRepository;
 import com.francisco.foromania.domain.curso.DatosDeRegistroCurso;
 import com.francisco.foromania.domain.curso.DatosRespuestaCurso;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +15,7 @@ import java.net.URI;
 
 @RestController
 @RequestMapping("/curso")
+@SecurityRequirement(name = "bearer-key")
 public class CursoController {
 
     @Autowired
